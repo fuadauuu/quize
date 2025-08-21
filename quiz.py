@@ -51,3 +51,4 @@ elif score >=15:
 elif score <=5:
         print (" you are failed")
 print("good luck")
+print("Eyosias part")
