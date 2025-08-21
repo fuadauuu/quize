@@ -215,4 +215,7 @@ for item in correct:
     else:
         print(f"{answer} is incorrect, {correct[item]} is the correct answer")
         mark = mark
-print(f"{mark}/60 ")  
+print(f"{mark}/60 ") 
+
+
+print("Thank you Eden")
