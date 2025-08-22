@@ -251,7 +251,7 @@ print("Thank you Eden")
 
 
 
-#This part is done by Eyosiyas 
+#This part is done by Melkam Eyosiyas 
 
 import random
 import time
