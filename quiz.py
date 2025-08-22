@@ -394,3 +394,33 @@ def start_quiz():
 if __name__ == "__main__":
     start_quiz()
 
+
+
+
+# Developed by Hayat Hussen
+
+quiz_hayat = {"What is the basic unit of life?": ["a) Atom", "b) Cell", "c) Tissue", "b"],
+    "What is the capital of France?": ["a) Rome", "b) Madrid", "c) Paris", "c"],
+    "Who wrote 'Romeo and Juliet'?": ["a) William Wordsworth", "b) William Shakespeare", "c) Charles Dickens", "b"],
+    "Which planet is known as the Red Planet?": ["a) Mars", "b) Venus", "c) Jupiter", "a"],
+    "What is H2O commonly known as?": ["a) Salt", "b) Water", "c) Hydrogen", "b"],
+    "Which organ pumps blood in the human body?": ["a) Brain", "b) Liver", "c) Heart", "c"],
+    "How many continents are there on Earth?": ["a) Five", "b) Seven", "c) Six", "b"],
+    "What is the fastest land animal?": ["a) Lion", "b) Cheetah", "c) Horse", "b"],
+    "Which is the smallest prime number?": ["a) 0", "b) 1", "c) 2", "c"],
+    "Who invented the light bulb?": ["a) Nikola Tesla", "b) Albert Einstein", "c) Thomas Edison", "c"],
+    "Which language is used to create web pages?": ["a) HTML", "b) Python", "c) C++", "a"],
+    "Which is the largest planet in our solar system?": ["a) Saturn", "b) Earth", "c) Jupiter", "c"],
+    "What is the boiling point of water?": ["a) 100°C", "b) 0°C", "c) 50°C", "a"],
+    "Which animal is known as the king of the jungle?": ["a) Tiger", "b) Lion", "c) Elephant", "b"],
+    "Which month has 28 or 29 days?": ["a) February", "b) January", "c) April", "a"],
+    "Which part of the plant conducts photosynthesis?": ["a) Root", "b) Leaf", "c) Stem", "b"],
+    "What is the main source of energy for Earth?": ["a) Wind", "b) Water", "c) Sun", "c"],
+    "Which ocean is the largest?": ["a) Atlantic", "b) Pacific", "c) Indian", "b"],
+    "What do bees produce?": ["a) Milk", "b) Honey", "c) Wax", "b"],
+    "How many legs does a spider have?": ["a) 6", "b) 8", "c) 10", "b"],
+    "Which planet is closest to the sun?": ["a) Earth", "b) Mercury", "c) Mars", "b"],
+    "What is 10 × 10?": ["a) 100", "b) 10", "c) 20", "a"],
+    "Which shape has three sides?": ["a) Square", "b) Circle", "c) Triangle", "c"],
+    "What is the color of chlorophyll?": ["a) Red", "b) Green", "c) Blue", "b"]
+}
