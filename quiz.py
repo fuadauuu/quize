@@ -23,7 +23,33 @@ questions = {
     "Which blood vessels carry blood to the heart?": ["a) Arteries", "b) Veins", "c) Capillaries", "b"],
     "What is the main organ of the respiratory system?": ["a) Lungs", "b) Heart", "c) Kidney", "a"],
     "Which organ stores bile?": ["a) Pancreas", "b) Gallbladder", "c) Liver", "b"],
-    "What is the functional unit of the kidney?": ["a) Nephron", "b) Alveoli", "c) Neuron", "a"]
+    "What is the functional unit of the kidney?": ["a) Nephron", "b) Alveoli", "c) Neuron", "a"],
+    # this question is prepared by Eden Bogale
+    "What is the basic unit of life?": ["a) Atom", "b) Cell", "c) Tissue", "b"],
+    "Which particle has a negative charge?": ["a) Proton", "b) Neutron", "c) Electron", "c"],
+    "What is the chemical symbol for water?": ["a) H2O", "b) O2", "c) CO2", "a"],
+    "Which gas do plants absorb from the atmosphere?": ["a) Oxygen", "b) Nitrogen", "c) Carbon dioxide", "c"],
+    "What is the pH of a neutral solution?": ["a) 0", "b) 7", "c) 14", "b"],
+    "Which bond involves sharing electrons?": ["a) Ionic", "b) Covalent", "c) Metallic", "b"],
+    "What is the center of an atom called?": ["a) Electron", "b) Nucleus", "c) Proton", "b"],
+    "Which element is most abundant in the universe?": ["a) Oxygen", "b) Hydrogen", "c) Carbon", "b"],
+    "What is the process of liquid turning into gas?": ["a) Condensation", "b) Evaporation", "c) Freezing", "b"],
+    "Which state of matter has a definite volume but no fixed shape?": ["a) Solid", "b) Liquid", "c) Gas", "b"],
+    "What is the smallest unit of a chemical element?": ["a) Molecule", "b) Atom", "c) Ion", "b"],
+    "What type of bond forms between oppositely charged ions?": ["a) Covalent", "b) Ionic", "c) Hydrogen", "b"],
+    "What is the number of protons in an atom called?": ["a) Mass number", "b) Atomic number", "c) Isotope", "b"],
+    "Which subatomic particle is found outside the nucleus?": ["a) Proton", "b) Neutron", "c) Electron", "c"],
+    "What is the formula for table salt?": ["a) NaCl", "b) KCl", "c) CaCl2", "a"],
+    "Which element is a noble gas?": ["a) Oxygen", "b) Nitrogen", "c) Neon", "c"],
+    "What is the process of a solid changing directly into a gas?": ["a) Sublimation", "b) Condensation", "c) Melting", "a"],
+    "Which law states that matter cannot be created or destroyed?": ["a) Law of Conservation of Mass", "b) Boyle's Law", "c) Charles's Law", "a"],
+    "What is the charge of a neutron?": ["a) Positive", "b) Negative", "c) Neutral", "c"],
+    "Which element has the chemical symbol 'Fe'?": ["a) Fluorine", "b) Iron", "c) Francium", "b"],
+    "What is the universal solvent?": ["a) Alcohol", "b) Water", "c) Acetone", "b"],
+    "What is the term for a substance made of two or more elements chemically bonded?": ["a) Mixture", "b) Compound", "c) Solution", "b"],
+    "Which type of reaction releases heat?": ["a) Endothermic", "b) Exothermic", "c) Neutralization", "b"],
+    "What is the SI unit for amount of substance?": ["a) Mole", "b) Gram", "c) Liter", "a"],
+    "What is Avogadro’s number?": ["a) 6.022×10²³", "b) 3.14", "c) 9.81", "a"]
 }
 score = 0
 
@@ -215,4 +241,4 @@ for item in correct:
     else:
         print(f"{answer} is incorrect, {correct[item]} is the correct answer")
         mark = mark
-print(f"{mark}/60 ")  
+print(f"{mark}/60 ") 
