@@ -242,3 +242,155 @@ for item in correct:
         print(f"{answer} is incorrect, {correct[item]} is the correct answer")
         mark = mark
 print(f"{mark}/60 ") 
+
+
+
+
+print("Thank you Eden")
+
+
+
+
+#This part is done by Eyosiyas 
+
+import random
+import time
+
+questions = {
+    "Which enzyme is responsible for unzipping the DNA helix during replication?":
+        ["a) Ligase", "b) Helicase", "c) Polymerase", "d) Primase", "b", "Helicase unzips the DNA strands during replication."],
+    "What is the main function of the Golgi apparatus?":
+        ["a) Energy production", "b) Protein synthesis", "c) Packaging and transport of proteins", "d) DNA replication", "c", "The Golgi apparatus is responsible for packaging proteins and lipids for transport."],
+    "Which phase of mitosis do chromosomes line up in the center of the cell?":
+        ["a) Metaphase", "b) Anaphase", "c) Telophase", "d) Prophase", "a", "In Metaphase, chromosomes align at the cell's equatorial plane."],
+    "In which organelle does the Krebs cycle take place?":
+        ["a) Cytoplasm", "b) Mitochondria", "c) Nucleus", "d) Ribosome", "b", "The Krebs cycle occurs in the mitochondria, where energy is produced."],
+    "Which molecule carries amino acids to ribosomes?":
+        ["a) mRNA", "b) tRNA", "c) rRNA", "d) DNA", "b", "tRNA transports amino acids to the ribosome during protein synthesis."],
+    "What is the name of the process by which plants lose water vapor through stomata?":
+        ["a) Translocation", "b) Transpiration", "c) Evaporation", "d) Respiration", "b", "Transpiration is the process by which plants lose water vapor from their leaves through the stomata."],
+    "Which part of the brain regulates body temperature?":
+        ["a) Cerebrum", "b) Hypothalamus", "c) Cerebellum", "d) Medulla", "b", "The hypothalamus controls body temperature by regulating heat production and loss."],
+    "Which genetic disorder is caused by an extra chromosome 21?":
+        ["a) Turner syndrome", "b) Down syndrome", "c) Klinefelter syndrome", "d) Huntington's disease", "b", "Down syndrome is caused by an extra copy of chromosome 21."],
+    "Which nitrogenous base is found only in RNA and not DNA?":
+        ["a) Thymine", "b) Cytosine", "c) Uracil", "d) Adenine", "c", "Uracil is found in RNA and replaces thymine, which is present in DNA."],
+    "What is the final electron acceptor in cellular respiration?":
+        ["a) Carbon dioxide", "b) NAD+", "c) Oxygen", "d) FAD", "c", "Oxygen is the final electron acceptor in the electron transport chain during cellular respiration."],
+    "Which type of muscle tissue is involuntary and found in the walls of internal organs?":
+        ["a) Skeletal", "b) Cardiac", "c) Smooth", "d) Voluntary", "c", "Smooth muscle is found in the walls of organs and is involuntary."],
+    "Which hormone regulates the sleep-wake cycle?":
+        ["a) Insulin", "b) Melatonin", "c) Adrenaline", "d) Cortisol", "b", "Melatonin is produced by the pineal gland and regulates the sleep-wake cycle."],
+    "Which macromolecule contains the most energy per gram?":
+        ["a) Carbohydrates", "b) Proteins", "c) Lipids", "d) Nucleic acids", "c", "Lipids contain the most energy per gram, providing long-term energy storage."],
+    "What structure connects the two hemispheres of the brain?":
+        ["a) Cerebellum", "b) Corpus callosum", "c) Brainstem", "d) Medulla", "b", "The corpus callosum is the structure that connects the left and right hemispheres of the brain."],
+    "What is the role of surfactant in the lungs?":
+        ["a) Prevent infections", "b) Reduce surface tension", "c) Increase oxygen diffusion", "d) Absorb CO2", "b", "Surfactant reduces surface tension in the lungs, preventing alveolar collapse during exhalation."],
+    "Which plant hormone is responsible for cell elongation?":
+        ["a) Ethylene", "b) Cytokinin", "c) Auxin", "d) Gibberellin", "c", "Auxin promotes cell elongation, allowing the plant to grow towards light."],
+    "Which organ is responsible for producing urea?":
+        ["a) Liver", "b) Kidney", "c) Pancreas", "d) Spleen", "a", "The liver breaks down proteins and produces urea, which is then filtered by the kidneys."],
+    "Which process converts nitrogen gas into a usable form for plants?":
+        ["a) Denitrification", "b) Nitrogen fixation", "c) Nitrification", "d) Ammonification", "b", "Nitrogen fixation is the process by which nitrogen gas is converted into a form usable by plants."],
+    "Which protein structure level is determined by hydrogen bonds in the backbone?":
+        ["a) Primary", "b) Secondary", "c) Tertiary", "d) Quaternary", "b", "The secondary structure of a protein is formed by hydrogen bonds between the amino acid backbone."],
+    "What type of immunity is achieved through vaccination?":
+        ["a) Passive immunity", "b) Natural immunity", "c) Active artificial immunity", "d) Innate immunity", "c", "Active artificial immunity is acquired through vaccination, stimulating the immune system to recognize pathogens."],
+    "Which structure prevents food from entering the windpipe?":
+        ["a) Pharynx", "b) Epiglottis", "c) Larynx", "d) Esophagus", "b", "The epiglottis closes the windpipe during swallowing to prevent food from entering the lungs."],
+    "Which part of the nephron is responsible for filtration?":
+        ["a) Loop of Henle", "b) Glomerulus", "c) Collecting duct", "d) Bowman's capsule", "b", "The glomerulus is responsible for filtering blood to form urine."],
+    "Which ion is essential for muscle contraction?":
+        ["a) Sodium", "b) Potassium", "c) Calcium", "d) Magnesium", "c", "Calcium ions are released during muscle contraction and bind to troponin, triggering contraction."],
+    "Which component of blood is responsible for clotting?":
+        ["a) Plasma", "b) Platelets", "c) White blood cells", "d) Red blood cells", "b", "Platelets are responsible for blood clotting and wound repair."],
+    "Which gas is most abundant in the Earth's atmosphere?":
+        ["a) Oxygen", "b) Nitrogen", "c) Carbon dioxide", "d) Argon", "b", "Nitrogen makes up about 78% of Earth's atmosphere."],
+    "Which type of RNA carries the genetic blueprint from the DNA to the ribosome?":
+        ["a) mRNA", "b) tRNA", "c) rRNA", "d) miRNA", "a", "mRNA carries the genetic code from the DNA to the ribosome for protein synthesis."],
+    "What is the primary function of the large intestine?":
+        ["a) Absorption of nutrients", "b) Absorption of water", "c) Digestion of food", "d) Production of bile", "b", "The large intestine absorbs water and electrolytes, forming solid waste."],
+    "What is the function of the ribosome in the cell?":
+        ["a) Protein synthesis", "b) Energy production", "c) DNA replication", "d) Cell division", "a", "Ribosomes are the site of protein synthesis in the cell."],
+    "What type of bond holds the two strands of DNA together?":
+        ["a) Hydrogen bonds", "b) Ionic bonds", "c) Covalent bonds", "d) Peptide bonds", "a", "Hydrogen bonds hold the complementary base pairs in the two DNA strands together."],
+    "Which of these organisms is capable of photosynthesis?":
+        ["a) Fungi", "b) Plants", "c) Animals", "d) Bacteria", "b", "Plants are the primary organisms capable of photosynthesis, converting sunlight into chemical energy."],
+    "What part of the chloroplast contains chlorophyll?":
+        ["a) Thylakoid", "b) Stroma", "c) Outer membrane", "d) Inner membrane", "a", "Chlorophyll is located in the thylakoid membranes of the chloroplasts, where photosynthesis takes place."],
+    "What is the genetic material found in viruses?":
+        ["a) RNA", "b) DNA", "c) Both RNA and DNA", "d) Neither RNA nor DNA", "c", "Viruses can contain either RNA or DNA as their genetic material, not both."],
+    "What type of bond links amino acids together in proteins?":
+        ["a) Hydrogen bond", "b) Ionic bond", "c) Peptide bond", "d) Covalent bond", "c", "A peptide bond links amino acids to form proteins."],
+}
+print("Welcome to the Quiz Game!")
+name=input("enter name")
+print("dear ", name,"wellcome to quize")
+print ("read carefully the following questions")
+print(" cheating is not allowed")
+
+def start_quiz():
+    score = 0
+    incorrect_questions = []
+    start_time = time.time()
+
+    
+    question_keys = list(questions.keys())
+    random.shuffle(question_keys)
+
+    for idx, question in enumerate(question_keys, 1):
+        print(f"Question {idx}: {question}")
+        options = questions[question][:4]
+        correct_answer = questions[question][4]
+        explanation = questions[question][5]
+        
+        
+        for option in options:
+            print(option)
+        
+        
+        question_start_time = time.time()
+        answer = input("Your answer (a/b/c/d): ").lower()
+        question_end_time = time.time()
+
+        
+        time_taken = round(question_end_time - question_start_time, 2)
+        
+        if answer == correct_answer:
+            print("✅ Correct!")
+            score += 1
+        else:
+            print(f"❌ Incorrect! The correct answer was '{correct_answer}'")
+            incorrect_questions.append((question, correct_answer, explanation))
+
+        print(f"⏱ You took {time_taken} seconds to answer.\n")
+
+    total_time = round(time.time() - start_time, 2)
+    print(f"🎯 Your final score is {score}/{len(questions)}")
+    print(f"⏱ Total time taken: {total_time} seconds\n")
+    
+    
+    if score >= 20:
+        print("🌟 Excellent!")
+    elif score >= 15:
+        print("👍 Very good!")
+    elif score <= 5:
+        print("❌ You failed. Please review your biology notes.")
+    else:
+        print("📚 Keep practicing!")
+
+    
+    if incorrect_questions:
+        print("\n📝 Review your incorrect answers:")
+        for q, correct_answer, explanation in incorrect_questions:
+            print(f"Question: {q}")
+            print(f"Correct Answer: {correct_answer}")
+            print(f"Explanation: {explanation}\n")
+
+    print("🧠 Good luck and keep learning biology!")
+
+
+if __name__ == "__main__":
+    start_quiz()
+
