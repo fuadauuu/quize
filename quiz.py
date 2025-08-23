@@ -1,258 +1,3 @@
-questions = {
-    "What is the basic unit of life?": ["a) Atom", "b) Cell", "c) Tissue", "b"],
-    "Which organelle is known as the powerhouse of the cell?": ["a) Ribosome", "b) Mitochondria", "c) Nucleus", "b"],
-    "Which pigment is responsible for photosynthesis?": ["a) Hemoglobin", "b) Chlorophyll", "c) Carotene", "b"],
-    "What is the genetic material in most organisms?": ["a) DNA", "b) RNA", "c) Protein", "a"],
-    "Which kingdom includes mushrooms?": ["a) Plantae", "b) Fungi", "c) Protista", "b"],
-    "What part of the plant conducts photosynthesis?": ["a) Root", "b) Stem", "c) Leaf", "c"],
-    "Which blood cells help fight infections?": ["a) Red blood cells", "b) White blood cells", "c) Platelets", "b"],
-    "Which part of the cell controls activities?": ["a) Nucleus", "b) Cytoplasm", "c) Ribosome", "a"],
-    "What is the largest organ in the human body?": ["a) Brain", "b) Skin", "c) Liver", "b"],
-    "Which vitamin is produced in the skin with sunlight?": ["a) Vitamin C", "b) Vitamin D", "c) Vitamin B12", "b"],
-    "Which organ purifies blood in humans?": ["a) Kidney", "b) Heart", "c) Lungs", "a"],
-    "Which process produces gametes?": ["a) Mitosis", "b) Meiosis", "c) Fertilization", "b"],
-    "Which blood group is the universal donor?": ["a) AB", "b) O", "c) A", "b"],
-    "Which blood group is the universal recipient?": ["a) AB", "b) O", "c) B", "a"],
-    "Which organ is responsible for pumping blood?": ["a) Lungs", "b) Heart", "c) Kidney", "b"],
-    "Which tissue connects bones to muscles?": ["a) Ligament", "b) Tendon", "c) Cartilage", "b"],
-    "What type of blood cells carry oxygen?": ["a) Platelets", "b) Red blood cells", "c) White blood cells", "b"],
-    "Which gas do humans exhale?": ["a) Oxygen", "b) Carbon dioxide", "c) Nitrogen", "b"],
-    "Which organ is responsible for detoxification?": ["a) Stomach", "b) Liver", "c) Pancreas", "b"],
-    "What is the hardest substance in the human body?": ["a) Bone", "b) Enamel", "c) Cartilage", "b"],
-    "Which part of the brain controls balance?": ["a) Cerebrum", "b) Cerebellum", "c) Medulla", "b"],
-    "Which blood vessels carry blood to the heart?": ["a) Arteries", "b) Veins", "c) Capillaries", "b"],
-    "What is the main organ of the respiratory system?": ["a) Lungs", "b) Heart", "c) Kidney", "a"],
-    "Which organ stores bile?": ["a) Pancreas", "b) Gallbladder", "c) Liver", "b"],
-    "What is the functional unit of the kidney?": ["a) Nephron", "b) Alveoli", "c) Neuron", "a"],
-    # this question is prepared by Eden Bogale
-    "What is the basic unit of life?": ["a) Atom", "b) Cell", "c) Tissue", "b"],
-    "Which particle has a negative charge?": ["a) Proton", "b) Neutron", "c) Electron", "c"],
-    "What is the chemical symbol for water?": ["a) H2O", "b) O2", "c) CO2", "a"],
-    "Which gas do plants absorb from the atmosphere?": ["a) Oxygen", "b) Nitrogen", "c) Carbon dioxide", "c"],
-    "What is the pH of a neutral solution?": ["a) 0", "b) 7", "c) 14", "b"],
-    "Which bond involves sharing electrons?": ["a) Ionic", "b) Covalent", "c) Metallic", "b"],
-    "What is the center of an atom called?": ["a) Electron", "b) Nucleus", "c) Proton", "b"],
-    "Which element is most abundant in the universe?": ["a) Oxygen", "b) Hydrogen", "c) Carbon", "b"],
-    "What is the process of liquid turning into gas?": ["a) Condensation", "b) Evaporation", "c) Freezing", "b"],
-    "Which state of matter has a definite volume but no fixed shape?": ["a) Solid", "b) Liquid", "c) Gas", "b"],
-    "What is the smallest unit of a chemical element?": ["a) Molecule", "b) Atom", "c) Ion", "b"],
-    "What type of bond forms between oppositely charged ions?": ["a) Covalent", "b) Ionic", "c) Hydrogen", "b"],
-    "What is the number of protons in an atom called?": ["a) Mass number", "b) Atomic number", "c) Isotope", "b"],
-    "Which subatomic particle is found outside the nucleus?": ["a) Proton", "b) Neutron", "c) Electron", "c"],
-    "What is the formula for table salt?": ["a) NaCl", "b) KCl", "c) CaCl2", "a"],
-    "Which element is a noble gas?": ["a) Oxygen", "b) Nitrogen", "c) Neon", "c"],
-    "What is the process of a solid changing directly into a gas?": ["a) Sublimation", "b) Condensation", "c) Melting", "a"],
-    "Which law states that matter cannot be created or destroyed?": ["a) Law of Conservation of Mass", "b) Boyle's Law", "c) Charles's Law", "a"],
-    "What is the charge of a neutron?": ["a) Positive", "b) Negative", "c) Neutral", "c"],
-    "Which element has the chemical symbol 'Fe'?": ["a) Fluorine", "b) Iron", "c) Francium", "b"],
-    "What is the universal solvent?": ["a) Alcohol", "b) Water", "c) Acetone", "b"],
-    "What is the term for a substance made of two or more elements chemically bonded?": ["a) Mixture", "b) Compound", "c) Solution", "b"],
-    "Which type of reaction releases heat?": ["a) Endothermic", "b) Exothermic", "c) Neutralization", "b"],
-    "What is the SI unit for amount of substance?": ["a) Mole", "b) Gram", "c) Liter", "a"],
-    "What is Avogadro’s number?": ["a) 6.022×10²³", "b) 3.14", "c) 9.81", "a"]
-}
-score = 0
-
-print("Welcome to the Quiz Game!")
-name=input("enter name")
-print("dear ", name,"wellcome to quize")
-print ("read carefully the following questions")
-print(" cheating is not allowed")
-for question, options in questions.items():
-    print(question)
-    for option in options[:-1]:  # Display choices
-        print(option)
-    answer = input("Your answer: ").lower()
-
-    if answer == options[-1]:
-        print("✅ Correct!\n")
-        score += 1
-    else:
-        print(f"❌ Wrong! The correct answer was '{options[-1]}'\n")
-print(f" Your final score is {score}/{len(questions)}")# Simple Quiz Game
-if score>=20:
-        print("excellent")
-elif score >=15:
-        print("very good")
-elif score <=5:
-        print (" you are failed")
-print("good luck")
-print("Eyosias part")
-
-
-# This part is done by EDEN
-Q1  = """ 	Antonym of “optimistic”
-A. 	Hopeful
-B. 	Cheerful
-C. 	Pessimistic
-D. 	Confident"""
-Q2 = """ Correct spelling
-A. 	Recieve
-B. 	Receive 
-C. 	Receeve
-D. 	Recive """
-Q3 = """ 	Figure of speech: “The wind whispered through the trees.”
-A. 	Simile
-B. 	Metaphor
-C. 	Personification 
-D. 	Hyperbole"""
-Q4 = """ 	Grammatically correct sentence
-A. 	She don’t like coffee.
-B. 	He go to school every day.
-C. 	They has finished their homework.
-D. 	I have never seen that movie. """
-
-#🧬 Biology (4 Questions)
-Q5 = """ 	Genetic material is found in the...
-A. 	Cytoplasm
-B. 	Nucleus 
-C. 	Mitochondria
-D. 	Ribosome""" 
-Q6 = """ 	Function of white blood cells
-A. 	Carry oxygen
-B. 	Fight infection 
-C. 	Digest food
-D. 	Produce energy""" 
-Q7 =	""" Organ that filters blood
-A. 	Liver
-B. 	Kidney 
-C. 	Heart
-D. 	Lungs"""
-Q8 ="""	Photosynthesis occurs in...
-A. 	Chloroplast 
-B. 	Nucleus
-C. 	Mitochondria
-D. 	Golgi apparatus"""
-
-#⚗️ Chemistry (4 Questions)
-Q9 =""" 	Atomic number of oxygen
-A. 	6
-B. 	8 
-C. 	10
-D. 	12"""
-Q10 = """	Noble gas among the following
-A. 	Nitrogen
-B. 	Oxygen
-C. 	Argon 
-D. 	Hydrogen"""
-Q11 =""" 	Bond in NaCl
-A. 	Covalent
-B. 	Ionic 
-C. 	Metallic
-D. 	Hydrogen """
-Q12 = """	pH of a basic solution
-A. 	Less than 7
-B. 	Equal to 7
-C. 	Greater than 7 
-D. 	Exactly 0 """
-
-#🔭 Physics (4 Questions)
-Q13 = """ 	Unit of force
-A. 	Joule
-B. 	Newton 
-C. 	Watt
-D. 	Pascal """
-Q14 = """	Law of equal and opposite reaction
-A. 	Newton’s First Law
-B. 	Newton’s Second Law
-C. 	Newton’s Third Law 
-D. 	Law of Gravitation """
-Q15 = """ 	Speed of sound in air (approx)
-A. 	330 m/s 
-B. 	3,000 m/s
-C. 	30 m/s
-D. 	1,000 m/s """
-Q16 =""" 	Device converting electrical to mechanical energy
-A. 	Generator
-B. 	Transformer
-C. 	Motor 
-D. 	Battery"""
-
-#🧮 Aptitude (4 Questions)
-Q17 = """	Cost of 8 pens if 5 pens cost $20
-A. 	$32 
-B. 	$30
-C. 	$25
-D. 	$28 """
-Q18 =""" 	Odd one out: 2, 4, 8, 16, 32, 65
-A. 	2
-B. 	4
-C. 	65 
-D. 	16 """
-Q19 =""" 	Angle between clock hands at 3:15
-A. 	0°
-B. 	7.5° 
-C. 	30°
-D. 	45° """
-Q20 =""" 	Shortest distance back: 3 km north, 4 km east
-A. 	5 km 
-B. 	7 km
-C. 	1 km
-D. 	6 km """
-
-#➗ Mathematics (5 Questions)
-Q21 =""" 	√144
-A. 	10
-B. 	11
-C. 	12 
-D. 	14 """
-Q22 =""" 	Solve: 2x + 3 = 11
-A. 	x = 3
-B. 	x = 4 
-C. 	x = 5
-D. 	x = 6 """
-Q23 =""" 	Area of triangle (base 10 cm, height 5 cm)
-A. 	25 cm² 
-B. 	50 cm²
-C. 	15 cm²
-D. 	30 cm²"""
-Q24 = """ 	Next number: 1, 4, 9, 16, ?
-A. 	20
-B. 	25 
-C. 	36
-D. 	49 """
-Q25 = """ 	Value of (3 + 2)²
-A. 	25 
-B. 	20
-C. 	15
-D. 	10 """
-
-
-correct={Q1:'C',Q2:'B',Q3:'C',Q4:'D',Q5:'B'
-        ,Q6:'B',Q7:'B',Q8:'A',Q9:'B',Q10:'C'
-        ,Q11:'B',Q12:'C',Q13:'B',Q14:'C',Q15:'A'
-        ,Q16:'C',Q17:'A',Q18:'C',Q19:'B',Q20:'A'
-        ,Q21:'C',Q22:'B',Q23:'A',Q24:'B',Q25:'A'}
-print("Welcome to General Quiz")
-name = input("Enter your full name: ")
-print(f"Dear {name}, Welcome to general quiz")
-print("Please read  following instructions")
-print("Instr. 1:any cancellation will loss your mark ")
-print("Instr. 2: Cheating will disqualify your total result")
-mark = 0
-choice = ['a', 'b', 'c', 'd']
-for item in correct:
-    print(item)
-    answer = input("Choose the correct answer a/b/c/d: ").upper()
-   
-    if answer==correct[item]:
-        print(f" {answer} is correct answer, you got 2 pts.")
-        mark = mark+2
-    else:
-        print(f"{answer} is incorrect, {correct[item]} is the correct answer")
-        mark = mark
-print(f"{mark}/60 ") 
-
-
-
-
-print("Thank you Eden")
-
-
-
-
-#This part is done by Melkam Eyosiyas 
-
 import random
 import time
 
@@ -323,7 +68,152 @@ questions = {
         ["a) RNA", "b) DNA", "c) Both RNA and DNA", "d) Neither RNA nor DNA", "c", "Viruses can contain either RNA or DNA as their genetic material, not both."],
     "What type of bond links amino acids together in proteins?":
         ["a) Hydrogen bond", "b) Ionic bond", "c) Peptide bond", "d) Covalent bond", "c", "A peptide bond links amino acids to form proteins."],
+    "Who among the following coined the term 'cell'?":
+        ["a) Theodor Schwann", "b) Robert Hooke", "c) Oswald Avery", "d) Gerhard Domagk", "b", "Robert Hooke coined the term 'cell'."],
+    "The suicidal bags of the cell are:":
+        ["a) Lysosomes", "b) Ribosomes", "c) Dictyosomes", "d) Phagosomes", "a", "Lysosomes are known as the 'suicidal bags' of the cell."],
+    "In which part of the cell are proteins made?":
+        ["a) Reticulum", "b) Golgi apparatus", "c) Ribosomes", "d) Lysosome", "c", "Proteins are synthesized in ribosomes."],
+    "Name the scientist who proposed the cell theory.":
+        ["a) Schleiden and Schwann", "b) Lamarck", "c) Treviranus", "d) Whittaker and Stanley", "a", "Schleiden and Schwann proposed the cell theory."],
+    "Which cell organelle is also called the 'power house of a cell'?":
+        ["a) Lysosome", "b) Mitochondria", "c) Golgi Apparatus", "d) Plastids", "b", "Mitochondria generate cellular energy, thus 'power house'."],
+    "The cell wall of a plant is composed of:":
+        ["a) Lipoprotein", "b) Carbohydrates", "c) Cellulose", "d) Lipids", "c", "Cellulose is the main component of the plant cell wall."],
+    "What is contained in Chlorophyll?":
+        ["a) Sodium", "b) Potassium", "c) Manganese", "d) Magnesium", "d", "Magnesium is the central atom in chlorophyll."],
+    "Which part of a plant cell traps sunlight to make sugar?":
+        ["a) Chloroplast", "b) Leucoplast", "c) Chromoplast", "d) Starch grain", "a", "Chloroplasts capture light for photosynthesis."],
+    "Which of the following is not connective tissue?":
+        ["a) Bone", "b) Cartilage", "c) Blood", "d) Skeletal muscle", "d", "Skeletal muscle is not connective tissue."],
+    "Skeletal muscles are attached to the skeleton by tough connective tissues called:":
+        ["a) Cartilage", "b) Neurons", "c) Ligament", "d) Tendons", "d", "Tendons connect muscles to bones."],
+    "In plants, water is transported through which of the following medium?":
+        ["a) Xylem", "b) Phloem", "c) Stomata", "d) Root hair", "a", "Xylem transports water in plants."],
+    "Name the tissue that transports food to various parts of a plant.":
+        ["a) Phloem", "b) Xylem", "c) Parenchyma", "d) Sclerenchyma", "a", "Phloem distributes food in plants."],
+    "What does RNA stand for?":
+        ["a) Rado Nuclear Acid", "b) Ribo Nucleic Acid", "c) Rhino Nuclear Acid", "d) Resto Nucleus Acid", "b", "RNA stands for Ribo Nucleic Acid."],
+    "DNA stands for:":
+        ["a) Di Nucleic Acid", "b) Deoxy Nucleic Acid", "c) Di ribonucleic Acid", "d) Deoxyribonucleic Acid", "d", "DNA stands for Deoxyribonucleic Acid."],
+    "What is the basic unit of heredity?":
+        ["a) DNA", "b) RNA", "c) Chromosome", "d) Gene", "d", "A gene is the basic unit of heredity."],
+    "Which food component has the highest gross calorific value?":
+        ["a) Proteins", "b) Fats", "c) Carbohydrates", "d) Vitamins", "b", "Fats provide the highest calories per gram."],
+    "Which of the following has the highest protein content per gram?":
+        ["a) Apple", "b) Soyabean", "c) Wheat", "d) Groundnut", "b", "Soybeans are richer in protein per gram."],
+    "Which of the following is an active enzyme?":
+        ["a) trypsin", "b) trypsinogen", "c) chymotrypsinogen", "d) procarboxypeptidases", "a", "Trypsin is an active protein‑digesting enzyme."],
+    "In which form are carbohydrates stored in our body?":
+        ["a) Lactose", "b) Cellulose", "c) Glycogen", "d) Glucose", "c", "Carbohydrates are stored as glycogen."],
+    "Enzyme in the human body that breaks down carbohydrates is:":
+        ["a) Protease", "b) Lipase", "c) Pepsin", "d) Amylase", "d", "Amylase catalyzes carbohydrate digestion."],
+    "Which chromosome combination results in a female?" :
+        ["a) ZX", "b) XX", "c) YZ", "d) XY", "b", "XX is the female chromosome combination."],
+    "How many chromosomes does a human cell contain?":
+        ["a) 6", "b) 26", "c) 46", "d) 66", "c", "Human somatic cells have 46 chromosomes."],
+    "Mendel is known as the:":
+        ["a) Father of Physiology", "b) Father of Geology", "c) Father of Genetics", "d) Father of Biology", "c", "Mendel is regarded as the Father of Genetics."],
+    "Charles Darwin proposed his theory in which book?":
+        ["a) The families of flowering plant", "b) The origin of species", "c) The life on earth", "d) The story of the living world", "b", "Darwin's theory appears in 'The Origin of Species'."],
+    "Binomial Nomenclature was founded by:":
+        ["a) Charles Darwin", "b) Robert Nucleus", "c) Carl Linnaeus", "d) Lamarck", "c", "Carl Linnaeus developed binomial nomenclature."],
+    "Five-kingdom classification was proposed by:":
+        ["a) Whittaker", "b) Huxley", "c) Linnaeus", "d) Lamarck", "a", "Whittaker proposed the five-kingdom system."],
+    "Amoeba belongs to which kingdom?":
+        ["a) Monera", "b) Fungi", "c) Protista", "d) Animalia", "c", "Amoeba is classified under Protista."],
+    "Which organism is considered both living and non-living?":
+        ["a) Bacteria", "b) Fungi", "c) Algae", "d) Virus", "d", "Viruses lie at the boundary of living and non-living."],
+    "Which organism belongs to Monera?":
+        ["a) Bacteria", "b) Mushroom", "c) Fungi", "d) Bread mould", "a", "Bacteria are part of Monera."],
+    "Sponges belong to which phylum?":
+        ["a) Protozoa", "b) Annelida", "c) Porifera", "d) Cnidaria", "c", "Sponges are in the phylum Porifera."],
+    "Which type of reproduction occurs in Hydra?":
+        ["a) Fragmentation", "b) Budding", "c) Binary Fission", "d) Spore Formation", "b", "Hydra reproduces via budding."],
+    "Earthworms belong to the phylum:":
+        ["a) Protozoa", "b) Cnidaria", "c) Annelida", "d) Mollusca", "c", "Earthworms are annelids."],
+    "Which of the following is an Arthropod?":
+        ["a) Blood sucking leech", "b) Hookworm", "c) Earthworm", "d) Scorpion", "d", "Scorpion is an arthropod."],
+    "Which has an open vascular system?":
+        ["a) Cockroach", "b) Human", "c) Rat", "d) Birds", "a", "Cockroaches have an open circulatory system."],
+    "Crocodiles have how many heart chambers?":
+        ["a) Three", "b) One", "c) Four", "d) Two", "c", "Crocodiles possess a four-chambered heart."],
+    "Which term describes the lowest member of the food chain?":
+        ["a) Producer", "b) Digester", "c) Primary", "d) Herbivore", "a", "Producers form the base of food chains."],
+    "Domain, Kingdom and Phylum are examples of what?":
+        ["a) Class", "b) Classification level", "c) Taxonomic rank", "d) Biological classification", "c", "They are taxonomic ranks."],
+    "Who first described classical conditioning?":
+        ["a) Dmitri Mendeleev", "b) Ivan Pavlov", "c) Mikhail Lomonosov", "d) Ignaz Semmelweis", "b", "Ivan Pavlov introduced classical conditioning."],
+    "Ornithology is the study of what?":
+        ["a) Fish", "b) Birds", "c) Reptiles", "d) Amphibians", "b", "Ornithology is the study of birds."],
+    "Why are viruses considered non-living by many biologists?":
+        ["a) Not sentient", "b) Don't need food", "c) Don't excrete", "d) Can't reproduce without a host", "d", "Viruses can't reproduce without a host."],
+    "Which fish is poisonous?":
+        ["a) Surgeonfish", "b) Piranha", "c) Stonefish", "d) Grouper", "c", "Stonefish are poisonous."],
+    "What is the common name for Notamacropus?":
+        ["a) Possum", "b) Skunk", "c) Bobcat", "d) Wallaby", "d", "Notamacropus refers to wallabies."],
+    "Which disease is caused by bacterial infection?":
+        ["a) Chickenpox", "b) Giardia", "c) Lyme Disease", "d) Cystic fibrosis", "c", "Lyme disease is bacterial."],
+    "Animals probably evolved from:":
+        ["a) plants", "b) protists", "c) fungi", "d) lichens", "b", "Animals likely evolved from protists."],
+    "Which animal is radially symmetrical?":
+        ["a) Flatworm", "b) Jellyfish", "c) Roundworm", "d) Lobster", "b", "Jellyfish exhibit radial symmetry."],
+    "Segmented animals with exoskeletons are called?":
+        ["a) Platyhelminthes", "b) Molluscs", "c) Annelida", "d) Arthropods", "d", "These are arthropods."],
+    "A water‑filled plant cell is ___, while one that loses water is ___.":
+        ["a) lysed, not lysed", "b) lysed, flaccid", "c) turgid, flaccid", "d) flaccid, turgid", "c", "Turgid vs flaccid describes water status."],
+    "The four major classes of biological molecules include:":
+        ["a) organics...", "b) carbohydrates, saccharides...", "c) carbs, lipids, proteins, amino acids", "d) carbs, lipids, proteins, nucleic acids", "d", "The four macromolecule classes."],
+    "Fundamental unit of fungal structure is:":
+        ["a) spores", "b) gametes", "c) the hypha", "d) the mycelium", "d", "The mycelium is the fungal body."],
+
+        "What is the primary pigment used in photosynthesis?":
+        ["a) Chlorophyll", "b) Melanin", "c) Hemoglobin", "d) Myoglobin", "a", "Chlorophyll absorbs sunlight to drive the process of photosynthesis."],
+    "Which part of the brain is responsible for balance and coordination?":
+        ["a) Cerebrum", "b) Hypothalamus", "c) Medulla", "d) Cerebellum", "d", "The cerebellum manages balance, coordination, and posture."],
+    "Which gas is produced during photosynthesis?":
+        ["a) Carbon dioxide", "b) Oxygen", "c) Nitrogen", "d) Methane", "b", "Photosynthesis produces oxygen as a by-product."],
+    "What is the smallest blood vessel in the human body?":
+        ["a) Artery", "b) Vein", "c) Capillary", "d) Venule", "c", "Capillaries are the smallest blood vessels where gas exchange occurs."],
+    "Which blood cells help fight infection?":
+        ["a) Red blood cells", "b) Platelets", "c) Plasma cells", "d) White blood cells", "d", "White blood cells defend the body against pathogens."],
+    "Which organ stores bile?":
+        ["a) Liver", "b) Gallbladder", "c) Pancreas", "d) Small intestine", "b", "The gallbladder stores bile produced by the liver."],
+    "Which human system includes the skin?":
+        ["a) Nervous system", "b) Respiratory system", "c) Integumentary system", "d) Circulatory system", "c", "The integumentary system includes the skin, hair, and nails."],
+    "What do lysosomes contain?":
+        ["a) Enzymes", "b) RNA", "c) Ribosomes", "d) Mitochondria", "a", "Lysosomes contain digestive enzymes that break down waste."],
+    "Which part of the plant conducts water?":
+        ["a) Phloem", "b) Xylem", "c) Stomata", "d) Chloroplast", "b", "Xylem conducts water from roots to the rest of the plant."],
+    "Which is a non-cellular infectious agent?":
+        ["a) Bacteria", "b) Fungi", "c) Virus", "d) Protozoa", "c", "Viruses are acellular and need a host to reproduce."],
+    "What is the main function of DNA?":
+        ["a) Provide energy", "b) Transport oxygen", "c) Store genetic information", "d) Fight infections", "c", "DNA carries genetic information for development and function."],
+    "What part of the brain controls breathing?":
+        ["a) Cerebrum", "b) Cerebellum", "c) Medulla oblongata", "d) Hypothalamus", "c", "The medulla oblongata regulates involuntary actions like breathing."],
+    "What type of reproduction creates genetically identical offspring?":
+        ["a) Asexual reproduction", "b) Sexual reproduction", "c) Cross-pollination", "d) Fertilization", "a", "Asexual reproduction produces clones of the parent organism."],
+    "Which blood type is a universal donor?":
+        ["a) AB+", "b) A-", "c) O-", "d) B+", "c", "O-negative blood can be given to anyone in emergencies."],
+    "What do mitochondria produce?":
+        ["a) Proteins", "b) ATP", "c) DNA", "d) Hormones", "b", "Mitochondria are the site of ATP (energy) production."],
+    "Which of the following is an autotroph?":
+        ["a) Lion", "b) Fungus", "c) Tree", "d) Human", "c", "Autotrophs like trees produce their own food via photosynthesis."],
+    "What is the basic structure of proteins?":
+        ["a) Nucleotides", "b) Fatty acids", "c) Monosaccharides", "d) Amino acids", "d", "Proteins are composed of amino acids linked by peptide bonds."],
+    "What is the main excretory organ in humans?":
+        ["a) Liver", "b) Kidney", "c) Lungs", "d) Skin", "b", "The kidneys filter waste from the blood to form urine."],
+    "Which structure regulates the amount of light entering the eye?":
+        ["a) Retina", "b) Cornea", "c) Iris", "d) Lens", "c", "The iris adjusts the pupil to regulate light entry."],
+    "Which system transports nutrients and oxygen to cells?":
+        ["a) Digestive", "b) Nervous", "c) Circulatory", "d) Excretory", "c", "The circulatory system delivers oxygen and nutrients throughout the body."]
+
 }
+                
+                
+        #This part is done by Eyosiyas  
+
+
 print("Welcome to the Quiz Game!")
 name=input("enter name")
 print("dear ", name,"wellcome to quize")
@@ -396,31 +286,107 @@ if __name__ == "__main__":
 
 
 
+          # This part is done by Fuad
 
-# Developed by Hayat Hussen
 
-quiz_hayat = {"What is the basic unit of life?": ["a) Atom", "b) Cell", "c) Tissue", "b"],
-    "What is the capital of France?": ["a) Rome", "b) Madrid", "c) Paris", "c"],
-    "Who wrote 'Romeo and Juliet'?": ["a) William Wordsworth", "b) William Shakespeare", "c) Charles Dickens", "b"],
-    "Which planet is known as the Red Planet?": ["a) Mars", "b) Venus", "c) Jupiter", "a"],
-    "What is H2O commonly known as?": ["a) Salt", "b) Water", "c) Hydrogen", "b"],
-    "Which organ pumps blood in the human body?": ["a) Brain", "b) Liver", "c) Heart", "c"],
-    "How many continents are there on Earth?": ["a) Five", "b) Seven", "c) Six", "b"],
-    "What is the fastest land animal?": ["a) Lion", "b) Cheetah", "c) Horse", "b"],
-    "Which is the smallest prime number?": ["a) 0", "b) 1", "c) 2", "c"],
-    "Who invented the light bulb?": ["a) Nikola Tesla", "b) Albert Einstein", "c) Thomas Edison", "c"],
-    "Which language is used to create web pages?": ["a) HTML", "b) Python", "c) C++", "a"],
-    "Which is the largest planet in our solar system?": ["a) Saturn", "b) Earth", "c) Jupiter", "c"],
-    "What is the boiling point of water?": ["a) 100°C", "b) 0°C", "c) 50°C", "a"],
-    "Which animal is known as the king of the jungle?": ["a) Tiger", "b) Lion", "c) Elephant", "b"],
-    "Which month has 28 or 29 days?": ["a) February", "b) January", "c) April", "a"],
-    "Which part of the plant conducts photosynthesis?": ["a) Root", "b) Leaf", "c) Stem", "b"],
-    "What is the main source of energy for Earth?": ["a) Wind", "b) Water", "c) Sun", "c"],
-    "Which ocean is the largest?": ["a) Atlantic", "b) Pacific", "c) Indian", "b"],
-    "What do bees produce?": ["a) Milk", "b) Honey", "c) Wax", "b"],
-    "How many legs does a spider have?": ["a) 6", "b) 8", "c) 10", "b"],
-    "Which planet is closest to the sun?": ["a) Earth", "b) Mercury", "c) Mars", "b"],
-    "What is 10 × 10?": ["a) 100", "b) 10", "c) 20", "a"],
-    "Which shape has three sides?": ["a) Square", "b) Circle", "c) Triangle", "c"],
-    "What is the color of chlorophyll?": ["a) Red", "b) Green", "c) Blue", "b"]
-}
+
+    import random
+
+for question, data in questions.items():
+    options = data[:4]
+    correct_answer = data[4]
+    explanation = data[5]
+
+    print(question)
+    for option in options:
+        print(option)
+    user_answer = input("Your answer (a/b/c/d): ").lower()
+    
+    if user_answer == correct_answer:
+        print("Correct!")
+    else:
+        print(f"Wrong! Correct answer is {correct_answer}) {options[ord(correct_answer)-97][3:]}")
+    print("Explanation:", explanation)
+    print("-" * 40)
+
+
+
+
+          #This part is done by Banchayehu
+
+
+
+    import random
+
+question = random.choice(list(questions.keys()))
+options = questions[question][:4]
+correct_answer = questions[question][4]
+explanation = questions[question][5]
+
+print(question)
+for option in options:
+    print(option)
+user_answer = input("Your answer (a/b/c/d): ").lower()
+
+if user_answer == correct_answer:
+    print("Correct!")
+else:
+    print(f"Wrong! The correct answer is {correct_answer}) {options[ord(correct_answer) - 97][3:]}")
+print("Explanation:", explanation)
+
+
+
+            #This part is done by Eden
+
+
+
+import random
+
+score = 0
+questions_sample = random.sample(list(questions.items()), 5)
+
+for question, data in questions_sample:
+    options = data[:4]
+    correct_answer = data[4]
+    explanation = data[5]
+
+    print(question)
+    for option in options:
+        print(option)
+    user_answer = input("Your answer (a/b/c/d): ").lower()
+
+    if user_answer == correct_answer:
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Wrong! The correct answer is {correct_answer}) {options[ord(correct_answer) - 97][3:]}")
+    print("Explanation:", explanation)
+    print()
+
+print(f"Your final score: {score} out of 5")
+
+
+
+             #This part is done by hayat husen
+
+
+import random
+
+for question, data in questions.items():
+    options = data[:4]
+    correct_answer = data[4]
+    explanation = data[5]
+
+    print(question)
+    for option in options:
+        print(option)
+    
+    while True:
+        user_answer = input("Your answer (a/b/c/d): ").lower()
+        if user_answer == correct_answer:
+            print("Correct!")
+            break
+        else:
+            print(f"Wrong! Try again.")
+    print("Explanation:", explanation)
+    print("-" * 40)
